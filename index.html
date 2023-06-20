@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+     <meta charset="UTF-8">
+     <title>Helton pokemon</title>
+     <link rel="stylesheet" href="style.css">
+     <style> 
+          @font-face  {
+               font-family: 'pokemon';
+               src: url("Pokemon Hollow.ttf") format('truetype');
+          }
+     </style>
+     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="folha de estilo">
+</head> 
+<body>
+     <header>         
+          <img  id="l" src="ball.png" alt="">
+               <h1 id="logo">Pokemon</h1>
+                    <div id="pkk">
+               <img  id="l" src="ball.png" alt="">             
+        </div>
+     </header>
+     <main>
+       <div onclick="clicar()" class="game-board ">        
+          <img id="nu" src="nuvem.png">
+          <img id="mew"src="mew.gif" alt=""></img>
+          <img id="lugia"src="raro3.gif" alt=""></img>
+          <img  id="pedra"src="pedra.png" alt=""></img>
+          <img id="homem"src="homem.gif" alt=""></img>       
+          <img src="blas.gif" class="pipe1">
+          <img src="char.gif" class="char">
+          <img  class="grama1"src="grama.png" alt="">
+          <img  class="grama2"src="grama.png" alt=""></img>
+          <img id="rai"src="rai.png">
+       <h1 class="GameOver">Game Over</h1>
+          <div id="tabela">
+               <h1 class="po">
+                    <span class="pontuacao">0.0</span>
+               </h1>
+               <br>
+               <h1 class="po">
+                 <span class="pontuacao1">0.0</span>
+               </h1>
+               <h1 class="po">
+                 <span id="nome" class="pontuacao2">Nameles</span>
+               </h1>
+          </div>
+       </div>
+       <!--  
+     <div id="pk">
+          <img  class="lg" src="miniblas.png" alt="">
+          <img  class="lg" src="bomba.png" alt=""></img>
+          <img  class="lg" src="minichar.png" alt=""></img>        
+     </div>
+        -->
+     <footer>&copy; Criador Helton Santos</footer>
+     <div id="controls">
+        
+       <input id="btnstart"class="up" onmousedown="zerar()"onclick="voltar()"type="button" value="Iniciar">
+            <input onclick="OBS()" type="button" class="up"value="Obs">
+            <input onclick="Skin()" type="button" class="up"value="Skin">
+       <input onclick="clicar()" class="up"type="button" value="Pular">
+     </div>
+     <div class="bonecos">
+       <div id="alinhar">
+            <img onclick="trocar1()" class="escolha"src="eevee.gif" alt=""></img>
+       </div>
+       <div id="alinhar">
+            <img  onclick="trocar2()" class="escolha"src="pikachu.gif" alt=""></img>
+       </div>
+       <div id="alinhar">
+            <img  onclick="trocar3()"class="escolha" src="char.gif" alt=""></img>
+       </div>
+       <div id="alinhar">
+            <img  onclick="trocar4()" class="escolha"src="raro.gif" alt=""></img>
+       </div>
+       <div id="alinhar">
+            <img id="mew2"class="escolha"onclick="trocar5()"src="mew2.gif" alt=""></img>
+       </div>
+     </div>
+     <div class="bonecos2">
+        <div id="alinhar">
+             <img class="escolha2"onclick="trocab2()"src="raro2.gif" alt=""></img>
+        </div>
+        <div id="alinhar">
+             <img class="escolha2"onclick="trocab3()" src="blas.gif" alt=""></img>
+        </div>
+        <div id="alinhar">
+             <img onclick="trocab4()"class="escolha2"src="gordo.gif" alt=""></img>
+        </div>
+           <div id="alinhar">
+             <img src="mewtwo.gif"class="escolha2" onclick="trocab5()" alt=""></img>
+        </div>
+     </div>
+     <div id="espacoNome"><input id="EscreverNome"type="text" onclick="nada()" onblur="foco()" value="Digite seu Nome" >
+          <input class="EscreverN"id="EnviarNome"type="button" onclick="Enviarnome()"value="Enviar">
+     </div>
+     <div id="pk">
+          <img  class="lg" src="miniblas.png" alt="">
+          <img  class="lg" src="bomba.png" alt=""></img>
+          <img  class="lg" src="minichar.png" alt=""></img>        
+     </div>
+     </main>
+     
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+

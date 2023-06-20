@@ -1,0 +1,408 @@
+*{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+}
+body{
+     height: 100vh;
+     background-color: black;
+     background-color: ;
+     
+
+}
+header{
+     font-family: 'pokemon';
+     font-size: 2em;
+     text-align: center;
+     background-color:  #ffe795;
+     border-bottom: 3px solid  black;
+}
+main{
+     background-color: #ff4055;
+     height: 100%;
+     position: relative;
+}
+
+.game-board{
+     width: 90%;
+     max-width: 950px;
+     height: 1px;
+     padding: 24%;
+     border: 3px solid black;
+     margin: auto;
+     position: relative;
+     overflow: hidden;
+     background-image: linear-gradient(to top, #40ff63, white 20%, #15b6ff);
+   //border-bottom: 20px solid green;
+     box-shadow: 5px 5px 8px #551c20;
+
+}
+footer{
+     margin: auto;
+     background-color: black;
+     color: white;
+     text-align: center;
+     width: 75%;
+     max-width: 900px;
+     font-size: 25px;
+     border-bottom-right-radius: 15px;
+     border-bottom-left-radius: 15px;
+}
+//#roda{
+     width: 100%;
+     margin: auto;
+     text-align: justify;
+}
+//#roda > p{
+     font-size: 35px;
+}
+//#final{
+     height: 8%;
+     position: absolute;
+}
+//#final > h1{
+     color: white;
+     text-shadow: none;
+     font-weight: normal;
+     font-size: 3em;
+}
+//.atencao{
+     padding-bottom: 50px;
+}
+#controls{
+     width: 53%;
+     margin: auto;
+     align-items: center;
+}
+#skin{
+     margin-top: 50px;
+}
+#alinhar{
+     background-color: #991a39;
+     border: 3px solid black;
+     display: inline-block;
+     width: 17%;
+     height: 1px;
+     padding-bottom: 20%;
+     margin-left: 2%;
+}
+.skin{
+     display: block;
+     margin: auto;
+     width: 50%;
+     height: 50px;
+     border-radius: 10px;
+}
+.bonecos{
+     border: 3px solid transparent;
+     width: 100%;
+     margin: auto;
+     background-color: transparent;
+     border-radius: 8px;
+     box-shadow: 3px 3px 6px #00000098;
+     display: none;
+     text-align: center;
+}
+.bonecos2{
+     width: 100%;
+     margin: auto;
+     margin-top: 3%;
+     border-radius: 8px;
+     box-shadow: 3px 3px 6px #00000098;
+     display: none;
+    
+}
+.escolha{
+     width: 100%;
+     display: inline-block;
+     margin: auto;
+     border: 3px;
+     display: block;
+     
+     
+}
+.escolha2{
+     width: 100%;
+     display: inline-block;
+     margin: auto;
+     border: 3px;
+     display: block;
+     
+
+}
+#mew2{
+     width: 100%;
+}
+.up{
+     width: 23%;
+     padding: 4%;
+     font-size: 100%;
+     background-color: #ffffff;
+     box-shadow: 2px 2px 5px #83212b;
+     border-radius: 8px;
+     align-items: center;
+
+}
+#tabela{
+     position: absolute;
+     top: 5%;
+     left: 75%;
+     border: 1px solid black;
+     border-radius: 5px;
+         
+}
+#espacoNome{
+     margin: auto;
+     margin-top: 3%;
+     width: 50%;
+          
+}
+#EscreverNome{
+     display: block;
+     margin: auto;
+     width: 100%;
+     padding: 2.5%;
+     font-size: 100%;
+     border-radius: 20px;
+     background-color: #c1d2d2;
+     color: black;
+     border: 3px solid black;
+     box-shadow: 3px 3px 5px #8f001d;
+}
+#EnviarNome{
+     display: block;
+     margin: auto;
+     width: 25%;
+     padding: 3%;
+     margin-top: 10px;
+     background-color: #ffffff;
+     border: 3px solid black;
+     border-radius: 10px;
+     box-shadow: 3px 3px 5px #8f001d;
+}
+#EnviarNome:active{
+     background-color: #a1a1a1;
+}
+.po{
+     display: inline-block;
+     font-size: 100%;
+     font-weight: 400;
+     margin-right: 10px;
+     font-style: italic;
+     margin-left: 5px;
+}
+.pontuacao{
+     position: relative;
+     font-size: 170%;
+     font-weight: 400;
+     margin-right: 10px;
+     font-style: italic;
+ 
+     
+}
+.pontuacao2{
+     font-size: 100%;
+     position: relative;
+     font-weight: 400;
+     margin-right: 10px;
+     font-weight: 400;
+     font-style: italic;
+}
+.historico{
+     margin-left: 4px;
+}
+.historico1{
+     margin-left: 4px;
+}
+.up:active{
+     background-color: #7f7f7f;
+}
+.grama1{
+     position: absolute;
+     width: 70%;
+     top: 27%;
+     left: 0%;    
+}
+.grama2{
+     position: absolute;
+     width: 70%;
+     top: 27%;
+     left: 40%;
+}
+#rai{
+     width: 30%;
+     position: absolute;
+     left: 32%;
+     top: 0%;
+     animation: none;
+     display: none;
+}
+#mew{
+     position: absolute;
+     top: 0%;
+     left: 47%;
+     width: 40%;
+     animation: mew-A 15s infinite linear;
+}
+#pedra{
+     width: 40%;
+     animation: pedra 3s infinite linear;
+     position: absolute;
+     bottom: 0%;
+}
+.pipe1{
+     width: 15%;
+     position: absolute;
+     bottom: 0%;    
+     left: 10%;     
+     animation: none; 
+}
+.char{
+     width: 30%;
+     position: absolute;
+     bottom: 0%;
+     right: 0%;
+     animation: none;
+}
+#fly1{
+     display: block;   
+}
+#nu{
+     width: 30%;
+     position: absolute;
+     top: 0%;
+     animation:nu-vem 15s infinite linear;
+}
+#pk{
+     margin: auto;
+     margin-top: 20%;
+     width: 70%;
+     border: 3px solid black;
+     background-color:  #ffe795;
+}
+#pkk{
+     display: inline;
+    
+}
+#logo{
+     display: inline;
+     color: black;
+     text-shadow: 5px 5px 8px #85784e; 
+         
+}
+.GameOver{
+     font-family: 'pokemon';
+     text-shadow: none;
+     position: absolute;
+     left: 32%;
+     top: 33%;
+     font-size: 70px;
+     color: #252525;
+     animation: none;
+     display: none;
+}
+#l{
+     width: 60px;
+}
+.lg{
+     width: 32%;
+     position: relative;
+     display: inline-block;
+     margin: auto;
+}
+#lugia{
+     position: absolute;
+     animation: lugiaa 20s infinite linear;
+     width: 15%;
+}
+#homem{
+     position: absolute;
+     bottom: -2%;
+     width: 13%;
+     animation: homem 10s infinite linear;
+}
+@keyframes pipe-animation{
+from{
+     left:-30%;
+}
+to{
+     left:100%;
+}
+}
+@keyframes fly {
+0%{
+     bottom: 0;
+}
+/*  
+40%{
+     bottom: 150px;
+     }
+*/
+50%{
+     bottom: 170px;/ 
+}
+60%{
+     bottom: 150px;
+}
+          
+0%{
+     bottom: 0;
+}
+}
+@keyframes nu-vem{
+from{
+     left: -400px;
+}
+to{
+     left: 100%;
+}
+}
+
+@keyframes rai-kua{
+from{
+     top: 100%;
+}
+to{
+     top: 0%;
+}
+}
+@keyframes Game-Over{
+from{
+     top: 132%;
+}
+to{
+     top: 32%;
+}
+}
+@keyframes mew-A {
+from{
+     left: 10%;
+}
+to{
+     left: 57%;
+}
+}
+@keyframes pedra{
+from{
+     left: -400px;
+}
+to{
+     left: 100%;
+}
+}
+@keyframes lugiaa{
+from{
+     left: -40%;
+}
+to{
+     left: 100%;
+}
+}
+@keyframes homem{
+from{
+     left: -400%;
+}
+to{
+     left: 100%;
+}
+}
