@@ -9,10 +9,16 @@
      var EnviarNome= document.querySelector("#EnviarNome")
      var EscreverNome = document.querySelector("#EscreverNome")
      var EscreverN = document.querySelector(".EscreverN")
-     var value
- 
- 
 
+
+     document.addEventListener('DOMContentLoaded', function() {
+          var up = document.querySelector('.up');
+          var largura = document.body.offsetWidth;
+          if (largura >= 500) {
+            up.style.display = 'none';
+          }
+        });
+        
 
 
 function clicar(){
@@ -29,7 +35,7 @@ function clicar(){
      const pipePosition = pipe.offsetLeft
      
      const charPosition = +window.getComputedStyle(char).bottom.replace('px', '')
-     if (charPosition < 50 && pipePosition >= 530 && pipePosition <= 710)
+     if (charPosition < 50 && pipePosition >= 266 && pipePosition <= 400)
       {    var rai = window.document.querySelector('#rai')
       var GameOver = window.document.querySelector('.GameOver')
       pipe.style.position = "absolute"

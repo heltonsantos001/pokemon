@@ -12,7 +12,7 @@ body{
 }
 header{
      font-family: 'pokemon';
-     font-size: 2em;
+     font-size: 1em;
      text-align: center;
      background-color:  #ffe795;
      border-bottom: 3px solid  black;
@@ -25,9 +25,8 @@ main{
 
 .game-board{
      width: 90%;
-     max-width: 950px;
-     height: 1px;
-     padding: 24%;
+     max-width: 450px;
+     height: 250px;
      border: 3px solid black;
      margin: auto;
      position: relative;
@@ -43,7 +42,7 @@ footer{
      color: white;
      text-align: center;
      width: 75%;
-     max-width: 900px;
+     max-width: 400px;
      font-size: 25px;
      border-bottom-right-radius: 15px;
      border-bottom-left-radius: 15px;
@@ -141,6 +140,7 @@ footer{
      box-shadow: 2px 2px 5px #83212b;
      border-radius: 8px;
      align-items: center;
+    
 
 }
 #tabela{
@@ -254,7 +254,7 @@ footer{
      width: 15%;
      position: absolute;
      bottom: 0%;    
-     left: 10%;     
+     left: 100px;     
      animation: none; 
 }
 .char{
@@ -302,7 +302,7 @@ footer{
      display: none;
 }
 #l{
-     width: 60px;
+     width: 30px;
 }
 .lg{
      width: 32%;
