@@ -72,7 +72,8 @@ footer{
 #controls{
      width: 53%;
      margin: auto;
-     align-items: center;
+     display: flex;
+    justify-content: center;
 }
 #skin{
      margin-top: 50px;
@@ -94,7 +95,7 @@ footer{
 }
 .bonecos{
      border: 3px solid transparent;
-     width: 100%;
+     width: 500px;
      margin: auto;
      background-color: transparent;
      border-radius: 8px;
@@ -103,7 +104,7 @@ footer{
      text-align: center;
 }
 .bonecos2{
-     width: 100%;
+     width: 500px;
      margin: auto;
      margin-top: 3%;
      border-radius: 8px;
@@ -134,8 +135,8 @@ footer{
      width: 100%;
 }
 .up{
-     width: 23%;
-     padding: 4%;
+     width: 60px;
+     height: 35px;
      font-size: 100%;
      background-color: #ffffff;
      box-shadow: 2px 2px 5px #83212b;
