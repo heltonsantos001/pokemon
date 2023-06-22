@@ -11,15 +11,7 @@
      var EscreverN = document.querySelector(".EscreverN")
 
 
-     document.addEventListener('DOMContentLoaded', function() {
-          var up = document.querySelector('.up');
-          var largura = document.body.offsetWidth;
-          if (largura >= 500) {
-            up.style.display = 'none';
-          }
-        });
-        
-
+   
 
 function clicar(){
      var char = window.document.querySelector('.char')
@@ -49,8 +41,17 @@ function clicar(){
       clearInterval(interval)
       var h2 = parseFloat(value.toFixed(1))
       historico1.innerHTML = h2
+      
+      
  }
 },10)
+
+document.addEventListener("keydown", function(event) {
+    
+     if (event.keyCode == 38) {
+       clicar();
+     }
+   });
 
 //botao iniciar
 function voltar(){

@@ -80,9 +80,8 @@ footer{
      background-color: #991a39;
      border: 3px solid black;
      display: inline-block;
-     width: 17%;
-     height: 1px;
-     padding-bottom: 20%;
+     max-width: 80px;
+     max-height: 150px;
      margin-left: 2%;
 }
 .skin{
@@ -109,7 +108,8 @@ footer{
      border-radius: 8px;
      box-shadow: 3px 3px 6px #00000098;
      display: none;
-    
+     text-align: center;
+     
 }
 .escolha{
      width: 100%;
