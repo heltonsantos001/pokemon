@@ -29,7 +29,7 @@ function clicar(){
      const charPosition = +window.getComputedStyle(char).bottom.replace('px', '')
      if (charPosition < 35 && pipePosition >= 266 && pipePosition <= 360)
       {    var rai = window.document.querySelector('#rai')
-      var GameOver = window.document.querySelector('.GameOver')
+          var GameOver = window.document.querySelector('.GameOver')
       pipe.style.position = "absolute"
       char.style.bottom = `${charPosition}px`
       pipe.style.left =`${pipePosition}px`
@@ -354,4 +354,3 @@ function foco(){
      }
      
 }
-

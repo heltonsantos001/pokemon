@@ -11,11 +11,18 @@ body{
 
 }
 header{
-     font-family: 'pokemon';
      font-size: 1em;
      text-align: center;
      background-color:  #ffe795;
      border-bottom: 3px solid  black;
+     padding: 10px;
+}
+div > a{
+     background-color: #ecc74e;
+     padding: 2px;
+    border-radius: 5px;
+    text-decoration: none;
+
 }
 main{
      background-color: #ff4055;
@@ -44,36 +51,16 @@ footer{
      text-align: center;
      width: 75%;
      max-width: 400px;
-     font-size: 25px;
+     font-size: 15px;
      border-bottom-right-radius: 15px;
      border-bottom-left-radius: 15px;
 }
-//#roda{
-     width: 100%;
-     margin: auto;
-     text-align: justify;
-}
-//#roda > p{
-     font-size: 35px;
-}
-//#final{
-     height: 8%;
-     position: absolute;
-}
-//#final > h1{
-     color: white;
-     text-shadow: none;
-     font-weight: normal;
-     font-size: 3em;
-}
-//.atencao{
-     padding-bottom: 50px;
-}
+
 #controls{
      width: 53%;
      margin: auto;
      display: flex;
-    justify-content: center;
+     justify-content: center;
 }
 #skin{
      margin-top: 50px;
@@ -284,7 +271,7 @@ footer{
 }
 #pkk{
      display: inline;
-    
+     font-family: 'pokemon';
 }
 #logo{
      display: inline;
@@ -340,7 +327,7 @@ to{
      bottom: 100px;/ 
 }
 60%{
-     bottom: 130px;
+     bottom: 100px;
 }
           
 0%{
