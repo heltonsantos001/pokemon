@@ -5,7 +5,7 @@
 }
 body{
      height: 100vh;
-     background-color: black;
+     background-color: #ff4055;
      background-color: ;
      
 
@@ -19,7 +19,7 @@ header{
 }
 main{
      background-color: #ff4055;
-     height: 100%;
+     height: 100vh;
      position: relative;
 }
 
@@ -33,10 +33,10 @@ main{
      position: relative;
      overflow: hidden;
      background-image: linear-gradient(to top, #40ff63, white 20%, #15b6ff);
-   //border-bottom: 20px solid green;
      box-shadow: 5px 5px 8px #551c20;
 
 }
+
 footer{
      margin: auto;
      background-color: black;
@@ -298,7 +298,7 @@ footer{
      position: absolute;
      left: 32%;
      top: 33%;
-     font-size: 70px;
+     font-size: 35px;
      color: #252525;
      animation: none;
      display: none;
@@ -335,16 +335,12 @@ to{
 0%{
      bottom: 0;
 }
-/*  
-40%{
-     bottom: 150px;
-     }
-*/
+
 50%{
-     bottom: 170px;/ 
+     bottom: 100px;/ 
 }
 60%{
-     bottom: 150px;
+     bottom: 130px;
 }
           
 0%{

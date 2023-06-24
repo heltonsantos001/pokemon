@@ -27,7 +27,7 @@ function clicar(){
      const pipePosition = pipe.offsetLeft
      
      const charPosition = +window.getComputedStyle(char).bottom.replace('px', '')
-     if (charPosition < 50 && pipePosition >= 266 && pipePosition <= 400)
+     if (charPosition < 35 && pipePosition >= 266 && pipePosition <= 360)
       {    var rai = window.document.querySelector('#rai')
       var GameOver = window.document.querySelector('.GameOver')
       pipe.style.position = "absolute"
@@ -42,8 +42,11 @@ function clicar(){
       var h2 = parseFloat(value.toFixed(1))
       historico1.innerHTML = h2
       
-      
- }
+     
+
+     }
+     
+ 
 },10)
 
 document.addEventListener("keydown", function(event) {
@@ -52,6 +55,7 @@ document.addEventListener("keydown", function(event) {
        clicar();
      }
    });
+  
 
 //botao iniciar
 function voltar(){
@@ -245,6 +249,8 @@ function trocab2(){
      title: 'Skin modificada com sucesso'
 })
 }
+
+
 //trocar obstaculo 2
 function trocab3(){
      var bonecos2 =document.querySelector(".bonecos2")
@@ -270,6 +276,8 @@ function trocab3(){
      title: 'Skin modificada com sucesso'
 })
 }
+
+
 //trocar obstaculo 3
 function trocab4(){
      var bonecos2 =document.querySelector(".bonecos2")
@@ -295,6 +303,8 @@ function trocab4(){
      title: 'Skin modificada com sucesso'
 })
 }
+
+
 //trocar obstaculo 4
 function trocab5(){
      var bonecos2 =document.querySelector(".bonecos2")
@@ -321,6 +331,8 @@ function trocab5(){
 })
      
 }
+
+
 //botao enviar Nome
 function Enviarnome(){
      var nome = EscreverNome.value
@@ -330,11 +342,7 @@ function Enviarnome(){
   if (nome == "Digite seu Nome") {
      Swal.fire({ icon: 'error', title: 'Oops...', text: 'Digite um nome por favor!' })
      historico2.innerText = ""
-  }/*  else if (nome == "bianka" || nome == "Bianka" ) {
-     historico2.innerText = "Amor da minha vida"
-     Swal.fire({ title: 'Bianka!', text: 'Amor da minha vida', imageUrl: 'IMG-20221128-WA0041.jpg', imageWidth: 400, imageHeight: 300, imageAlt: 'Custom image', })
-          
-     } */
+  }
      
 }
 function nada(){
@@ -346,3 +354,4 @@ function foco(){
      }
      
 }
+
