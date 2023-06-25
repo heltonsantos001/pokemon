@@ -87,7 +87,7 @@ function zerar() {
 function trocar1(){
      var bonecos = document.querySelector(".bonecos")
      bonecos.style.display = "none"
-     char.src = "eevee.gif"
+     char.src = "imagem/eevee.gif"
      char.style.position = "absolute"
      char.style.bottom = "0%"
      char.style.width = "25%"
@@ -113,7 +113,7 @@ function trocar1(){
 function trocar2(){
      var bonecos = document.querySelector(".bonecos")
      bonecos.style.display = "none"
-     char.src = "pikachu.gif"
+     char.src = "imagem/pikachu.gif"
      char.style.position = "absolute"
      char.style.bottom = "-5%"
      char.style.width = "25%"
@@ -139,7 +139,7 @@ function trocar2(){
 function trocar3(){
      var bonecos = document.querySelector(".bonecos")
      bonecos.style.display = "none"
-     char.src = "char.gif"
+     char.src = "imagem/char.gif"
      char.style.position = "absolute"
      char.style.bottom = "0px"
      char.style.right = "0"
@@ -165,7 +165,7 @@ function trocar3(){
 function trocar4(){
      var bonecos = document.querySelector(".bonecos")
      bonecos.style.display = "none"
-     char.src = "raro.gif"
+     char.src = "imagem/raro.gif"
      char.style.position = "absolute"
      char.style.bottom = "0%%"
      char.style.right = "6%"
@@ -192,7 +192,7 @@ function trocar4(){
 function trocar5(){
      var bonecos = document.querySelector(".bonecos")
      bonecos.style.display = "none"
-     char.src = "mew2.gif"
+     char.src = "imagem/mew2.gif"
      char.style.position = "absolute"
      char.style.bottom = "3%"
      char.style.right = "10%"
@@ -227,7 +227,7 @@ function OBS(){
 //trocar obstaculo 1
 function trocab2(){
      var bonecos2 =document.querySelector(".bonecos2")
-     pipe.src = "raro2.gif"
+     pipe.src = "imagem/raro2.gif"
      pipe.style.position = "absolute"
      pipe.style.bottom = "0%"
      bonecos2.style.display ="none"
@@ -254,7 +254,7 @@ function trocab2(){
 //trocar obstaculo 2
 function trocab3(){
      var bonecos2 =document.querySelector(".bonecos2")
-     pipe.src = "blas.gif"
+     pipe.src = "imagem/blas.gif"
      pipe.style.position = "absolute"
      pipe.style.bottom = "0%"
      bonecos2.style.display ="none"
@@ -281,7 +281,7 @@ function trocab3(){
 //trocar obstaculo 3
 function trocab4(){
      var bonecos2 =document.querySelector(".bonecos2")
-     pipe.src = "gordo.gif"
+     pipe.src = "imagem/gordo.gif"
      pipe.style.position = "absolute"
      pipe.style.bottom = "-2%"
      bonecos2.style.display ="none"
@@ -308,7 +308,7 @@ function trocab4(){
 //trocar obstaculo 4
 function trocab5(){
      var bonecos2 =document.querySelector(".bonecos2")
-     pipe.src = "mewtwo.gif"
+     pipe.src = "imagem/mewtwo.gif"
      pipe.style.position = "absolute"
      pipe.style.bottom = "-2%"
      bonecos2.style.display ="none"
