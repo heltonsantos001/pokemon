@@ -5,7 +5,7 @@
 }
 body{
      height: 100vh;
-     background-color: #ff4055;
+     background-color: #df384c;
      background-color: ;
      
 
@@ -33,15 +33,17 @@ a:hover{
 }
 main{
      background-color: #ff4055;
+     margin: auto;
+     max-width: 500px;
      height: 100vh;
      position: relative;
+     border: 1px solid black;
 }
 
-.game-board{
-     width: 90%;
-     max-width: 450px;
+.game-board{ 
+     max-width: 400px;
      min-width: 300px;
-     height: 250px;
+     height: 200px;
      border: 3px solid black;
      margin: auto;
      position: relative;
@@ -219,13 +221,13 @@ footer{
 .grama1{
      position: absolute;
      width: 70%;
-     top: 27%;
+     top: 20%;
      left: 0%;    
 }
 .grama2{
      position: absolute;
      width: 70%;
-     top: 27%;
+     top: 20%;
      left: 40%;
 }
 #rai{
