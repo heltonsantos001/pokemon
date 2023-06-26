@@ -1,14 +1,11 @@
 
      var interval
-     var span = document.querySelector(".pontuacao")
      var char = window.document.querySelector('.char')
      var pipe = window.document.querySelector('.pipe1')
      var historico1= document.querySelector(".pontuacao1")
      var historico2= document.querySelector(".pontuacao2")
      var historico3 = document.querySelector(".pontuacao3")
-     var EnviarNome= document.querySelector("#EnviarNome")
-     var EscreverNome = document.querySelector("#EscreverNome")
-     var EscreverN = document.querySelector(".EscreverN")
+    
 
 
    
@@ -27,26 +24,36 @@ function clicar(){
      const pipePosition = pipe.offsetLeft
      
      const charPosition = +window.getComputedStyle(char).bottom.replace('px', '')
-     if (charPosition < 35 && pipePosition >= 290 && pipePosition <= 360)
-      {    var rai = window.document.querySelector('#rai')
-          var GameOver = window.document.querySelector('.GameOver')
-      pipe.style.position = "absolute"
-      char.style.bottom = `${charPosition}px`
-      pipe.style.left =`${pipePosition}px`
-      pipe.style.animation = 'none'
-      rai.style.animation = 'rai-kua 4s linear'
-      rai.style.display = 'block'
-      GameOver.style.animation = 'Game-Over 4s linear'
-      GameOver.style.display = 'block'
-      clearInterval(interval)
-      var h2 = parseFloat(value.toFixed(1))
-      historico1.innerHTML = h2
-      
-     
 
+     if (charPosition < 35 && pipePosition >= 290 && pipePosition <= 380){
+
+          var rai = window.document.querySelector('#rai')
+          var GameOver = window.document.querySelector('.GameOver')
+          pipe.style.position = "absolute"
+          char.style.bottom = `${charPosition}px`
+          pipe.style.left =`${pipePosition}px`
+          pipe.style.animation = 'none'
+          rai.style.animation = 'rai-kua 4s linear'
+          rai.style.display = 'block'
+          GameOver.style.animation = 'Game-Over 4s linear'
+          GameOver.style.display = 'block'
+          
+
+          clearInterval(interval)
+          var h2 = parseFloat(value.toFixed(1))
+          historico1.innerHTML = h2
+     
      }
      
- 
+     if (span.innerText >= 30.0) {
+          document.body.style.backgroundColor = '#2c2c2c'
+          let game_board = document.querySelector('.game-board')
+          let main = document.querySelector('main')
+
+          main.style.backgroundColor = '#2c2c2c'
+          game_board.style.backgroundImage ='linear-gradient(to top, #40ff63, white 20%, #2c2c2c)'
+     }  
+
 },10)
 
 document.addEventListener("keydown", function(event) {
@@ -54,10 +61,11 @@ document.addEventListener("keydown", function(event) {
      if (event.keyCode == 38) {
        clicar();
      }
-   });
+});
   
 
 //botao iniciar
+var span = document.querySelector(".pontuacao")
 function voltar(){
      const blas = window.document.querySelector('.pipe1')
      const rais = window.document.querySelector("#rai")
@@ -69,15 +77,20 @@ function voltar(){
      GO.style.display = 'none'
      char.style.position = "absolute"
      char.style.bottom = "0%"
-     var btnstart = document.querySelector("#btnstart")
+     let btnstart = document.querySelector("#btnstart")
      btnstart = true
      value = parseFloat(span.innerText) 
      interval = setInterval(() => {
           value += 0.1
           
           span.innerText = value.toFixed(1)
+         
      }, 100)
-}     
+
+     
+}   
+
+
 //zerar o cronometro
 function zerar() {
      clearInterval(interval)
@@ -92,6 +105,7 @@ function trocar1(){
      char.style.bottom = "0%"
      char.style.width = "25%"
      char.style.right = "4%"
+
      const Toast = Swal.mixin({
      toast: true,
      position: 'top-end',
@@ -118,6 +132,7 @@ function trocar2(){
      char.style.bottom = "-5%"
      char.style.width = "25%"
      char.style.right = "4%"
+
      const Toast = Swal.mixin({
      toast: true,
      position: 'top-end',
@@ -144,6 +159,7 @@ function trocar3(){
      char.style.bottom = "0px"
      char.style.right = "0"
      char.style.width = "30%"
+
      const Toast = Swal.mixin({
      toast: true,
      position: 'top-end',
@@ -170,6 +186,7 @@ function trocar4(){
      char.style.bottom = "0%%"
      char.style.right = "6%"
      char.style.width = "30%"
+
      const Toast = Swal.mixin({
      toast: true,
      position: 'top-end',
@@ -197,6 +214,7 @@ function trocar5(){
      char.style.bottom = "3%"
      char.style.right = "10%"
      char.style.width = "20%"
+
      const Toast = Swal.mixin({
      toast: true,
      position: 'top-end',
@@ -232,6 +250,7 @@ function trocab2(){
      pipe.style.bottom = "0%"
      bonecos2.style.display ="none"
      pipe.style.width = "20%"
+
      const Toast = Swal.mixin({
      toast: true,
      position: 'top-end',
@@ -259,6 +278,7 @@ function trocab3(){
      pipe.style.bottom = "0%"
      bonecos2.style.display ="none"
      pipe.style.width = "15%"
+
      const Toast = Swal.mixin({
      toast: true,
      position: 'top-end',
@@ -286,6 +306,7 @@ function trocab4(){
      pipe.style.bottom = "-2%"
      bonecos2.style.display ="none"
      pipe.style.width = "15%"
+
      const Toast = Swal.mixin({
      toast: true,
      position: 'top-end',
@@ -313,6 +334,7 @@ function trocab5(){
      pipe.style.bottom = "-2%"
      bonecos2.style.display ="none"
      pipe.style.width = "20%"
+
      const Toast = Swal.mixin({
      toast: true,
      position: 'top-end',
@@ -335,13 +357,15 @@ function trocab5(){
 
 //botao enviar Nome
 function Enviarnome(){
-     var nome = EscreverNome.value
+     let EscreverNome = document.querySelector("#EscreverNome")
+     let nome = EscreverNome.value
      historico2.innerText = `${nome}`
      EscreverNome.value = "Digite seu Nome"
      Swal.fire( 'sucesso!', `Seja bem-vindo ${nome}!`, 'success' )
+
   if (nome == "Digite seu Nome") {
-     Swal.fire({ icon: 'error', title: 'Oops...', text: 'Digite um nome por favor!' })
-     historico2.innerText = ""
+          Swal.fire({ icon: 'error', title: 'Oops...', text: 'Digite um nome por favor!' })
+          historico2.innerText = ""
   }
      
 }

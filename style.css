@@ -49,7 +49,7 @@ main{
      position: relative;
      overflow: hidden;
      background-image: linear-gradient(to top, #40ff63, white 20%, #15b6ff);
-     box-shadow: 5px 5px 8px #551c20;
+     box-shadow: 5px 5px 8px #080808;
 
 }
 
@@ -135,7 +135,7 @@ footer{
      height: 35px;
      font-size: 100%;
      background-color: #ffffff;
-     box-shadow: 2px 2px 5px #83212b;
+     box-shadow: 2px 2px 5px #05050586;
      border-radius: 8px;
      align-items: center;
     
@@ -168,7 +168,7 @@ footer{
      background-color: #c1d2d2;
      color: black;
      border: 3px solid black;
-     box-shadow: 3px 3px 5px #8f001d;
+     box-shadow: 3px 3px 5px #03030391;
 }
 #EnviarNome{
      display: block;
@@ -179,7 +179,7 @@ footer{
      background-color: #ffffff;
      border: 3px solid black;
      border-radius: 10px;
-     box-shadow: 3px 3px 5px #8f001d;
+     box-shadow: 3px 3px 5px #03030386;
 }
 #EnviarNome:active{
      background-color: #a1a1a1;
@@ -255,7 +255,7 @@ footer{
      width: 15%;
      position: absolute;
      bottom: 0%;    
-     left: 100px;     
+     left: 90px;     
      animation: none; 
 }
 .char{
@@ -287,7 +287,7 @@ footer{
 }
 #logo{
      display: inline;
-     color: black;
+     color: rgb(44, 44, 44);
      text-shadow: 5px 5px 8px #85784e; 
          
 }
