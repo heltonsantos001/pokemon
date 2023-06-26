@@ -18,11 +18,18 @@ header{
      padding: 10px;
 }
 div > a{
-     background-color: #ecc74e;
+     background-color:  white;
+     box-shadow: 1px 1px 3px #252525;
+     color: black;
      padding: 2px;
-    border-radius: 5px;
-    text-decoration: none;
+     border-radius: 5px;
+     text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+     font-weight: 100;
 
+}
+a:hover{
+     background-color: rgb(189, 188, 188);
 }
 main{
      background-color: #ff4055;
@@ -132,6 +139,9 @@ footer{
     
 
 }
+.up:hover{
+     background-color: rgb(189, 188, 188);
+}
 #tabela{
      position: absolute;
      top: 5%;
@@ -149,7 +159,7 @@ footer{
 #EscreverNome{
      display: block;
      margin: auto;
-     width: 100%;
+     max-width: 400px;
      padding: 2.5%;
      font-size: 100%;
      border-radius: 20px;
