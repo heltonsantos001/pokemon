@@ -18,7 +18,7 @@ header{
      padding: 10px;
 }
 div > a{
-     background-color:  white;
+     background-color:  #f0d98d;
      box-shadow: 1px 1px 3px #252525;
      color: black;
      padding: 2px;
@@ -29,7 +29,7 @@ div > a{
 
 }
 a:hover{
-     background-color: rgb(189, 188, 188);
+     background-color: #e0cb85;
 }
 main{
      background-color: #ff4055;
