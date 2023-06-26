@@ -46,12 +46,14 @@ main{
 
 
 #imagem{
-    max-width: 500px;
+    max-width: 499px;
     min-width: 320px;
     margin: auto;
-    height: 300px;
-    background-image: url('imagem/foto-pagina.png');
     background-position: center center;
+}
+#img-principal{
+    width: 500px;
+
 }
 
 
