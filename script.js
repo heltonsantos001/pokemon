@@ -378,3 +378,12 @@ function foco(){
      }
      
 }
+
+let next = document.querySelector("#next");
+
+next.addEventListener('click', ()=> {
+     let imagem sobre
+     let instrucao = document.querySelector('#instrucao');
+
+     instrucao.style.display = 'none'
+})
