@@ -28,7 +28,7 @@
         </div>
      </header>
      <main>
-       <div onclick="clicar()" class="game-board ">        
+       <div onclick="clicar()" class="game-board">        
           <img id="nu" src="imagem/nuvem.png"></img>
           <img id="mew"src="imagem/mew.gif" alt=""></img>
           <img id="lugia"src="imagem/raro3.gif" alt=""></img>
@@ -110,21 +110,34 @@
           <img  class="lg" src="imagem/minichar.png" alt=""></img>        
      </div>
       
-      <div id="slide-container">
-         <div id="slideShow-container">
+   <div id="slide-container">
+      <div id="slideShow-container">
          <div id="slideShow">
-            <img class="slide" src="imagem/sobreIniciar.png"alt="">
-            <img class="slide" src="imagem/sobreIniciar2.png" alt="">
-            <img class="slide" src="" alt="">
-            <img class="slide" src="" alt="">
-            <img class="slide" src="" alt="">
-            <img class="slide" src="" alt="">
-            <img class="slide" src="" alt="">
+            <div class="roll" >
+               <img class="slide" src="imagem/sobreIniciar.png"alt="">
+            </div>
+            <div class="roll">
+               <img class="slide" src="imagem/sobreIniciar2.png" alt="">
+            </div>
+            <div class="roll" >
+               <img class="slide" src="" alt="">
+            </div>
+            <div class="roll" >
+               <img class="slide" src="" alt="">
+            </div>
+            <div class="roll" >
+               <img class="slide" src="" alt="">
+            </div>
+            <div class="roll" >
+               <img class="slide" src="" alt="">
+            </div>
+            <div class="roll">
+              <img class="slide" src="" alt="">
+            </div>
          </div>
 
 
-         <a class="prev" href="#"></a>
-         <a class="next" href="#"></a>
+       
          
 
          <div id="dots-container">
@@ -137,7 +150,10 @@
             <span class="dot" ></span>
             <span class="dot" ></span>
          </div>
+        
       </div>
+      <a class="prev"></a>
+      <a onclick="scrollLeft()" class="next"></a>
       </div>
      </main>
      

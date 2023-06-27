@@ -379,11 +379,9 @@ function foco(){
      
 }
 
-let next = document.querySelector("#next");
-
-next.addEventListener('click', ()=> {
-     let imagem sobre
-     let instrucao = document.querySelector('#instrucao');
-
-     instrucao.style.display = 'none'
-})
+function scrollLeft() {
+     const container = document.querySelector('.roll');
+     container.scrollLeft -= 40;
+   }
+   
+   
