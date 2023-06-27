@@ -379,9 +379,21 @@ function foco(){
      
 }
 
-function scrollLeft() {
-     const container = document.querySelector('.roll');
-     container.scrollLeft -= 40;
-   }
-   
-   
+let slide = document.querySelector('.slide');
+const next = document.querySelector('.next')
+let passarFoto = []
+
+
+next.addEventListener('click', ()=>{
+     passarFoto.unshift(1)
+     console.log(passarFoto)
+     if (passarFoto.length == 1) {
+          slide.src = 'imagem/sobreIniciar2.png'
+     }
+     else if (passarFoto.length == 2) {
+          slide.src = 'imagem/sobreIniciar.png'
+     }
+     
+    
+     
+})

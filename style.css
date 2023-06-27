@@ -337,22 +337,11 @@ footer{
      display: flex;
      position: relative;
      width: 100%;
-     overflow-x: auto;
      
 }#slideShow{
      display: flex;
      height: 100%;
-     
-     
-     
    
-}
-.roll{
-     display: flex;
-     width: 360px;
-     height: 240px;
-     background-color: #080808;
-     border: 1px solid white;
 }
 .slide{
      width: 100%;
