@@ -383,17 +383,37 @@ let slide = document.querySelector('.slide');
 const next = document.querySelector('.next')
 let passarFoto = []
 
-
 next.addEventListener('click', ()=>{
      passarFoto.unshift(1)
-     console.log(passarFoto)
+     console.log(passarFoto.length)
      if (passarFoto.length == 1) {
           slide.src = 'imagem/sobreIniciar2.png'
+          slide.style.width = '100%'
+          document.querySelector('#textoExplicacao').innerHTML = 'usado parar trocar o obstaculo'
+       
      }
-     else if (passarFoto.length == 2) {
-          slide.src = 'imagem/sobreIniciar.png'
+     if (passarFoto.length == 2) {
+          passarFoto.pop()
+          console.log(passarFoto)
      }
+    
      
     
      
+})
+ 
+let prev = document.querySelector(".prev")
+
+prev.addEventListener('click', ()=>{
+     passarFoto.pop()
+     
+     if (passarFoto.length == 0) {
+          slide.src = 'imagem/images.png'
+          slide.style.width = '70%'
+          document.querySelector('#textoExplicacao').innerHTML = 'usado parar trocar o obstaculo'
+        
+     }
+     if (passarFoto.length == 3) {
+          console.log('ainn ze da manga')
+     }
 })

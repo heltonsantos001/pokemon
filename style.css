@@ -325,8 +325,8 @@ footer{
      border-radius: 10px;
      box-shadow: 3px 3px 6px #0000009a;
      background-color: white;
-     width: 400px;
-     height: 350px;
+     width: 450px;
+     height: 500px;
      position: absolute;
      left: 50%;
      top:  30%;
@@ -339,12 +339,12 @@ footer{
      width: 100%;
      
 }#slideShow{
-     display: flex;
-     height: 100%;
-   
+     width: 100%;
+     text-align: center;
 }
 .slide{
-     width: 100%;
+     width: 70%;
+    
 }
 .prev, .next{
      position: absolute;
