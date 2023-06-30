@@ -1,14 +1,13 @@
 var interval;
-var char = window.document.querySelector(".char");
-var pipe = window.document.querySelector(".pipe1");
 var historico1 = document.querySelector(".pontuacao1");
 var historico2 = document.querySelector(".pontuacao2");
 var historico3 = document.querySelector(".pontuacao3");
 
-//---------------Funçao pular----------------//32++,
+//---------------Funçao pular----------------//
+
+let char = window.document.querySelector(".char");
 
 function PularFuncao() {
-  var char = window.document.querySelector(".char");
 
   char.style.animation = "";
   setTimeout(() => (char.style.animation = "fly .8s"), 100);
@@ -16,7 +15,10 @@ function PularFuncao() {
 
 let Pular = document.querySelector("#Pular");
 
+//chama a funçao, pularFunçao
 Pular.addEventListener("click", PularFuncao);
+
+//evento para o efeito de pulo
 document.addEventListener("keydown", function (event) {
   if (event.keyCode == 38) {
     PularFuncao();
@@ -24,17 +26,19 @@ document.addEventListener("keydown", function (event) {
 });
 
 //---------------comandos de parede inisivel--------------//
-const loop = setInterval(() => {
-  let pipe = window.document.querySelector(".pipe1");
-  pipe = window.document.querySelector(".pipe1");
-  char = window.document.querySelector(".char");
 
+
+const loop = setInterval(() => {
+
+  let pipe = window.document.querySelector(".pipe1");
   const pipePosition = pipe.offsetLeft;
   const charPosition = +window.getComputedStyle(char).bottom.replace("px", "");
 
+//condiçao para o boneco bater no obstaculo
   if (charPosition < 35 && pipePosition >= 290 && pipePosition <= 380) {
-    var rai = window.document.querySelector("#rai");
-    var GameOver = window.document.querySelector(".GameOver");
+
+    let rai = window.document.querySelector("#rai");
+    let GameOver = window.document.querySelector(".GameOver");
     char.style.bottom = `${charPosition}px`;
     pipe.style.left = `${pipePosition}px`;
     pipe.style.animation = "none";
@@ -48,33 +52,38 @@ const loop = setInterval(() => {
     var h2 = parseFloat(value.toFixed(1));
     historico1.innerHTML = h2;
   }
-
+//condiçao para mudar o senario
   if (span.innerText >= 30.0) {
-    document.body.style.backgroundColor = "#2c2c2c";
+
     let game_board = document.querySelector(".game-board");
     let main = document.querySelector("main");
 
+    document.body.style.backgroundColor = "#2c2c2c";
     main.style.backgroundColor = "#2c2c2c";
     game_board.style.backgroundImage =
       "linear-gradient(to top, #40ff63, white 20%, #2c2c2c)";
   }
+
+
 }, 10);
 
 //------------------botao iniciar--------------------//
-
 var span = document.querySelector(".pontuacao");
-function voltar() {
-  const blas = window.document.querySelector(".pipe1");
-  const rais = window.document.querySelector("#rai");
+
+function iniciar() {
+  let pipe = window.document.querySelector(".pipe1");
+  let rai = window.document.querySelector("#rai");
   const GO = window.document.querySelector(".GameOver");
-  blas.style.animation = "pipe-animation 1.7s infinite linear";
-  rais.style.animation = "none";
-  rais.style.display = "none";
+  pipe.style.animation = "pipe-animation 1.7s infinite linear";
+  rai.style.animation = "none";
+  rai.style.display = "none";
   GO.style.animation = "none";
   GO.style.display = "none";
   char.style.position = "absolute";
   char.style.bottom = "0%";
   let btnstart = document.querySelector("#btnstart");
+
+  //sistema de pontuaçao
   btnstart = true;
   value = parseFloat(span.innerText);
   interval = setInterval(() => {
@@ -84,26 +93,27 @@ function voltar() {
   }, 100);
 }
 
-//zerar o cronometro
+
+//zerar pontuaçao
 function zerar() {
   clearInterval(interval);
   span.innerText = "0.0";
 }
 
+//chama a funçao, trocar, zerar
 let btnstart = document.querySelector("#btnstart");
-
-btnstart.addEventListener("click", voltar);
+btnstart.addEventListener("click", iniciar);
 btnstart.addEventListener("mouseup", zerar);
 
-//trocar  skin 1
-function trocar1() {
-  var bonecos = document.querySelector(".bonecos");
+
+//---------------------trocar  skin 1------------------//
+
+
+function trocar01() {
+  let bonecos = document.querySelector(".bonecos");
   bonecos.style.display = "none";
   char.src = "imagem/eevee.gif";
-  char.style.position = "absolute";
-  char.style.bottom = "0%";
-  char.style.width = "25%";
-  char.style.right = "4%";
+  char.classList.add("charClass");
 
   const Toast = Swal.mixin({
     toast: true,
@@ -122,8 +132,13 @@ function trocar1() {
     title: "Skin modificada com sucesso",
   });
 }
-//trocar  skin 2
-function trocar2() {
+//chama a funçao trocar01
+let trocar1 = document.querySelector('#trocar1')
+trocar1.addEventListener('click', trocar01)
+
+//-------------------trocar skin 2--------------------//
+
+function trocar02() {
   var bonecos = document.querySelector(".bonecos");
   bonecos.style.display = "none";
   char.src = "imagem/pikachu.gif";
@@ -149,6 +164,11 @@ function trocar2() {
     title: "Skin modificada com sucesso",
   });
 }
+//chama a funçao trocar02
+let trocar2 = document.querySelector('#trocar2');
+trocar2.addEventListener('click', trocar02)
+
+
 //trocar  skin 3
 function trocar3() {
   var bonecos = document.querySelector(".bonecos");

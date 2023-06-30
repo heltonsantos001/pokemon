@@ -377,7 +377,12 @@ footer{
      margin: 0 5px;
      cursor: pointer;
 }
-
+.charClass{
+  position: absolute;
+  bottom: -6%;
+  width: 25%;
+  right: 4%;
+}
 
 
 @keyframes pipe-animation{
