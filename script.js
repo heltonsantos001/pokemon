@@ -1,22 +1,30 @@
-var interval;
+
+//------------------------------------------------------//
+//--------------- variaveis escopo global --------------//
+//------------------------------------------------------//
 var historico1 = document.querySelector(".pontuacao1");
-var historico2 = document.querySelector(".pontuacao2");
+let nome = document.querySelector("#nome");
 var historico3 = document.querySelector(".pontuacao3");
+
+let char = window.document.querySelector(".char");
+let pipe = window.document.querySelector(".pipe1");
+let bonecos = document.querySelector(".bonecos");
+let bonecos2 = document.querySelector(".bonecos2");
+let interval;
+
 
 //---------------Funçao pular----------------//
 
-let char = window.document.querySelector(".char");
 
 function PularFuncao() {
-
   char.style.animation = "";
   setTimeout(() => (char.style.animation = "fly .8s"), 100);
 }
 
-let Pular = document.querySelector("#Pular");
 
-//chama a funçao, pularFunçao
+let Pular = document.querySelector("#Pular");
 Pular.addEventListener("click", PularFuncao);
+
 
 //evento para o efeito de pulo
 document.addEventListener("keydown", function (event) {
@@ -25,16 +33,17 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+
 //---------------comandos de parede inisivel--------------//
 
 
 const loop = setInterval(() => {
 
-  let pipe = window.document.querySelector(".pipe1");
   const pipePosition = pipe.offsetLeft;
   const charPosition = +window.getComputedStyle(char).bottom.replace("px", "");
 
-//condiçao para o boneco bater no obstaculo
+
+  //condiçao para o boneco bater no obstaculo
   if (charPosition < 35 && pipePosition >= 290 && pipePosition <= 380) {
 
     let rai = window.document.querySelector("#rai");
@@ -49,10 +58,13 @@ const loop = setInterval(() => {
     GameOver.style.display = "block";
 
     clearInterval(interval);
-    var h2 = parseFloat(value.toFixed(1));
+    let h2 = parseFloat(value.toFixed(1));
     historico1.innerHTML = h2;
   }
-//condiçao para mudar o senario
+
+
+  //condiçao para mudar o senario
+
   if (span.innerText >= 30.0) {
 
     let game_board = document.querySelector(".game-board");
@@ -67,11 +79,13 @@ const loop = setInterval(() => {
 
 }, 10);
 
-//------------------botao iniciar--------------------//
-var span = document.querySelector(".pontuacao");
+
+//------------------sistema iniciar--------------------//
+
+
+let span = document.querySelector(".pontuacao");
 
 function iniciar() {
-  let pipe = window.document.querySelector(".pipe1");
   let rai = window.document.querySelector("#rai");
   const GO = window.document.querySelector(".GameOver");
   pipe.style.animation = "pipe-animation 1.7s infinite linear";
@@ -81,9 +95,14 @@ function iniciar() {
   GO.style.display = "none";
   char.style.position = "absolute";
   char.style.bottom = "0%";
-  let btnstart = document.querySelector("#btnstart");
 
-  //sistema de pontuaçao
+}
+
+
+//--------------sistema pontuaçao-------------------//
+
+
+function Pontuacao() {
   btnstart = true;
   value = parseFloat(span.innerText);
   interval = setInterval(() => {
@@ -93,28 +112,43 @@ function iniciar() {
   }, 100);
 }
 
-
-//zerar pontuaçao
+//---------------zerar pontuaçao-------------------//
 function zerar() {
   clearInterval(interval);
   span.innerText = "0.0";
 }
 
-//chama a funçao, trocar, zerar
+//chama a funçao, iniciar, zerar
 let btnstart = document.querySelector("#btnstart");
+btnstart.addEventListener("click", zerar);
 btnstart.addEventListener("click", iniciar);
-btnstart.addEventListener("mouseup", zerar);
+btnstart.addEventListener("click", Pontuacao);
 
 
-//---------------------trocar  skin 1------------------//
+//--------------modificar skin, obs--------------------//
 
 
-function trocar01() {
-  let bonecos = document.querySelector(".bonecos");
-  bonecos.style.display = "none";
-  char.src = "imagem/eevee.gif";
-  char.classList.add("charClass");
+//botao skin
+let Skin = document.querySelector("#Skin");
+Skin.addEventListener("click", () => {
 
+  bonecos.style.display = "block";
+
+});
+
+//botao obs
+let OBS = document.querySelector("#OBS");
+OBS.addEventListener("click", () => {
+
+  bonecos2.style.display = "block";
+
+});
+
+
+//----------------funçoes Aviso skin------------------/
+
+
+function AvisoSkin() {
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
@@ -132,14 +166,30 @@ function trocar01() {
     title: "Skin modificada com sucesso",
   });
 }
-//chama a funçao trocar01
+
+
+//--------------------- trocar  skin 1------------------//
+
 let trocar1 = document.querySelector('#trocar1')
-trocar1.addEventListener('click', trocar01)
+
+trocar1.addEventListener('click', () => {
+
+  bonecos.style.display = "none";
+  char.src = "imagem/eevee.gif";
+  char.classList.add("charClass");
+
+  AvisoSkin()
+
+})
+
 
 //-------------------trocar skin 2--------------------//
 
-function trocar02() {
-  var bonecos = document.querySelector(".bonecos");
+
+let trocar2 = document.querySelector('#trocar2');
+
+trocar2.addEventListener('click', () => {
+
   bonecos.style.display = "none";
   char.src = "imagem/pikachu.gif";
   char.style.position = "absolute";
@@ -147,31 +197,18 @@ function trocar02() {
   char.style.width = "25%";
   char.style.right = "4%";
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
-  });
+  AvisoSkin()
 
-  Toast.fire({
-    icon: "success",
-    title: "Skin modificada com sucesso",
-  });
-}
-//chama a funçao trocar02
-let trocar2 = document.querySelector('#trocar2');
-trocar2.addEventListener('click', trocar02)
+})
 
 
-//trocar  skin 3
-function trocar3() {
-  var bonecos = document.querySelector(".bonecos");
+//------------------trocar  skin 3-----------------------//
+
+
+let trocar3 = document.querySelector('#trocar3');
+
+trocar3.addEventListener('click', () => {
+
   bonecos.style.display = "none";
   char.src = "imagem/char.gif";
   char.style.position = "absolute";
@@ -179,26 +216,18 @@ function trocar3() {
   char.style.right = "0";
   char.style.width = "30%";
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
-  });
+  AvisoSkin()
 
-  Toast.fire({
-    icon: "success",
-    title: "Skin modificada com sucesso",
-  });
-}
-//trocar  skin 4
-function trocar4() {
-  var bonecos = document.querySelector(".bonecos");
+})
+
+
+//------------------- troca skin 4 -----------------//
+
+
+let trocar4 = document.querySelector('#trocar4');
+
+trocar4.addEventListener('click', () => {
+
   bonecos.style.display = "none";
   char.src = "imagem/raro.gif";
   char.style.position = "absolute";
@@ -206,27 +235,18 @@ function trocar4() {
   char.style.right = "6%";
   char.style.width = "30%";
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
-  });
+  AvisoSkin()
 
-  Toast.fire({
-    icon: "success",
-    title: "Skin modificada com sucesso",
-  });
-}
+})
 
-//trocar  skin 5
-function trocar5() {
-  var bonecos = document.querySelector(".bonecos");
+
+//--------------------trocar  skin 5------------------//
+
+
+let mew2 = document.querySelector('#mew2');
+
+mew2.addEventListener('click', () => {
+
   bonecos.style.display = "none";
   char.src = "imagem/mew2.gif";
   char.style.position = "absolute";
@@ -234,204 +254,114 @@ function trocar5() {
   char.style.right = "10%";
   char.style.width = "20%";
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
-  });
+  AvisoSkin()
 
-  Toast.fire({
-    icon: "success",
-    title: "Skin modificada com sucesso",
-  });
-}
-//botao Skin
-let Skin = document.querySelector("#Skin");
-Skin.addEventListener("click", () => {
-  var bonecos = document.querySelector(".bonecos");
-  bonecos.style.display = "block";
-});
+})
 
-//botao obs
 
-let OBS = document.querySelector("#OBS");
+//----------------trocar obstaculo 1---------------------//
 
-OBS.addEventListener("click", () => {
-  var bonecos2 = document.querySelector(".bonecos2");
-  bonecos2.style.display = "block";
-});
 
-//trocar obstaculo 1
-function trocab2() {
-  var bonecos2 = document.querySelector(".bonecos2");
+let trocab2 = document.querySelector("#trocab2");
+
+trocab2.addEventListener('click', () => {
+
   pipe.src = "imagem/raro2.gif";
   pipe.style.position = "absolute";
   pipe.style.bottom = "0%";
   bonecos2.style.display = "none";
   pipe.style.width = "20%";
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
-  });
+  AvisoSkin()
 
-  Toast.fire({
-    icon: "success",
-    title: "Skin modificada com sucesso",
-  });
-}
+});
 
-//trocar obstaculo 2
-function trocab3() {
-  var bonecos2 = document.querySelector(".bonecos2");
+
+//---------------------trocar obstaculo 2---------------------//
+
+
+let trocab3 = document.querySelector('#trocab3')
+
+trocab3.addEventListener('click', () => {
+
   pipe.src = "imagem/blas.gif";
   pipe.style.position = "absolute";
   pipe.style.bottom = "0%";
   bonecos2.style.display = "none";
   pipe.style.width = "15%";
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
-  });
+  AvisoSkin()
 
-  Toast.fire({
-    icon: "success",
-    title: "Skin modificada com sucesso",
-  });
-}
+})
 
-//trocar obstaculo 3
-function trocab4() {
-  var bonecos2 = document.querySelector(".bonecos2");
+
+//---------------------trocar obstaculo 3--------------------//
+
+
+let trocab4 = document.querySelector("#trocab4")
+trocab4.addEventListener('click', () => {
+
   pipe.src = "imagem/gordo.gif";
   pipe.style.position = "absolute";
   pipe.style.bottom = "-2%";
   bonecos2.style.display = "none";
   pipe.style.width = "15%";
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
-  });
+  AvisoSkin()
 
-  Toast.fire({
-    icon: "success",
-    title: "Skin modificada com sucesso",
-  });
-}
+})
 
 //trocar obstaculo 4
-function trocab5() {
-  var bonecos2 = document.querySelector(".bonecos2");
+let trocab5 = document.querySelector("#trocab5");
+trocab5.addEventListener('click', () => {
+
   pipe.src = "imagem/mewtwo.gif";
   pipe.style.position = "absolute";
   pipe.style.bottom = "-2%";
   bonecos2.style.display = "none";
   pipe.style.width = "20%";
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
-  });
+  AvisoSkin()
 
-  Toast.fire({
-    icon: "success",
-    title: "Skin modificada com sucesso",
-  });
-}
+})
 
-//botao enviar Nome
-function Enviarnome() {
+
+//----------------------botao enviar Nome----------------------//
+
+
+let EnviarNome = document.querySelector('#EnviarNome');
+
+EnviarNome.addEventListener('click', () => {
+
   let EscreverNome = document.querySelector("#EscreverNome");
-  let nome = EscreverNome.value;
-  historico2.innerText = `${nome}`;
+  let nome1 = EscreverNome.value;
+  nome.innerText = `${nome1}`;
   EscreverNome.value = "Digite seu Nome";
-  Swal.fire("sucesso!", `Seja bem-vindo ${nome}!`, "success");
+  Swal.fire("sucesso!", `Seja bem-vindo ${nome1}!`, "success");
 
-  if (nome == "Digite seu Nome") {
+
+  if (nome1 == "Digite seu Nome") {
     Swal.fire({
       icon: "error",
       title: "Oops...",
       text: "Digite um nome por favor!",
     });
-    historico2.innerText = "";
+
+    nome.innerText = "";
   }
-}
-function nada() {
+});
+
+
+//-------------------botao escrever nome -----------------//
+
+
+let EscreverNome = document.querySelector("#EscreverNome")
+
+EscreverNome.addEventListener('focus', () => {
+
   EscreverNome.value = "";
-}
-function foco() {
-  if (EscreverNome.value == "") {
+  if (EscreverNome.value = "") {
     EscreverNome.value = "Digite seu Nome";
   }
-}
 
-let slide = document.querySelector(".slide");
-const next = document.querySelector(".next");
-let passarFoto = [];
-
-next.addEventListener("click", () => {
-  passarFoto.unshift(1);
-  console.log(passarFoto.length);
-  if (passarFoto.length == 1) {
-    slide.src = "imagem/sobreIniciar2.png";
-    slide.style.width = "100%";
-    document.querySelector("#textoExplicacao").innerHTML =
-      "usado parar trocar o obstaculo";
-  }
-  if (passarFoto.length == 2) {
-    passarFoto.pop();
-    console.log(passarFoto);
-  }
-});
-
-let prev = document.querySelector(".prev");
-
-prev.addEventListener("click", () => {
-  passarFoto.pop();
-
-  if (passarFoto.length == 0) {
-    slide.src = "imagem/images.png";
-    slide.style.width = "70%";
-    document.querySelector("#textoExplicacao").innerHTML =
-      "usado parar trocar o obstaculo";
-  }
-  if (passarFoto.length == 3) {
-    console.log("ainn ze da manga");
-  }
-});
+})

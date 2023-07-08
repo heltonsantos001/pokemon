@@ -50,15 +50,15 @@ main{
      box-shadow: 5px 5px 8px #080808;
 
 }
-@media screen and (max-width: 500px ) {
+@media screen and (max-width: 490px ) {
      .game-board{ 
-     width: 370px;
-     height: 220px;
+     width: 350px;
+     height: 200px;
      border: 3px solid black;
      margin: auto;
      position: relative;
      overflow: hidden;
-     background-image: linear-gradient(to top, #40ff63, white 20%, #0c0c0c);
+     background-image: linear-gradient(to top, #40ff63, white 20%, #15b6ff);
      box-shadow: 5px 5px 8px #080808;
 
 }
@@ -313,7 +313,7 @@ footer{
      animation: none;
      display: none;
 }
-#l{
+.l{
      width: 30px;
 }
 .lg{
@@ -392,7 +392,7 @@ footer{
 }
 .charClass{
   position: absolute;
-  bottom: -6%;
+  bottom: 0%;
   width: 25%;
   right: 4%;
 }
