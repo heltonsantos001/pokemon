@@ -26,8 +26,6 @@ document.addEventListener("keydown", function (event) {
 });
 
 //---------------comandos de parede inisivel--------------//
-
-
 const loop = setInterval(() => {
 
   let pipe = window.document.querySelector(".pipe1");
@@ -66,6 +64,8 @@ const loop = setInterval(() => {
 
 
 }, 10);
+
+
 
 //------------------botao iniciar--------------------//
 var span = document.querySelector(".pontuacao");
@@ -251,8 +251,10 @@ function trocar5() {
     title: "Skin modificada com sucesso",
   });
 }
+
 //botao Skin
 let Skin = document.querySelector("#Skin");
+
 Skin.addEventListener("click", () => {
   var bonecos = document.querySelector(".bonecos");
   bonecos.style.display = "block";
@@ -268,8 +270,9 @@ OBS.addEventListener("click", () => {
 });
 
 //trocar obstaculo 1
-function trocab2() {
+function trocab02() {
   var bonecos2 = document.querySelector(".bonecos2");
+  var pipe = window.document.querySelector(".pipe1");
   pipe.src = "imagem/raro2.gif";
   pipe.style.position = "absolute";
   pipe.style.bottom = "0%";
@@ -293,6 +296,12 @@ function trocab2() {
     title: "Skin modificada com sucesso",
   });
 }
+
+let trocab2 = document.querySelector("#trocab2")
+
+trocab2.addEventListener('click', trocab02)
+
+
 
 //trocar obstaculo 2
 function trocab3() {
