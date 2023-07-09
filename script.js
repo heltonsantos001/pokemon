@@ -37,15 +37,12 @@ document.addEventListener("keydown", function (event) {
 //---------------comandos de parede inisivel--------------//
 
 
-const loop = setInterval(() => {
 
+const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft;
   const charPosition = +window.getComputedStyle(char).bottom.replace("px", "");
 
-
-  //condiçao para o boneco bater no obstaculo
-  if (charPosition < 35 && pipePosition >= 290 && pipePosition <= 380) {
-
+  function loser() {
     let rai = window.document.querySelector("#rai");
     let GameOver = window.document.querySelector(".GameOver");
     char.style.bottom = `${charPosition}px`;
@@ -63,21 +60,42 @@ const loop = setInterval(() => {
   }
 
 
-  //condiçao para mudar o senario
-
-  if (span.innerText >= 30.0) {
-
-    let game_board = document.querySelector(".game-board");
-    let main = document.querySelector("main");
-
-    document.body.style.backgroundColor = "#2c2c2c";
-    main.style.backgroundColor = "#2c2c2c";
-    game_board.style.backgroundImage =
-      "linear-gradient(to top, #40ff63, white 20%, #2c2c2c)";
+  // Função para verificar colisão e parar o pipe
+  function verificarColisao() {
+    if (window.innerWidth <= 430) {
+      if (charPosition < 35 && pipePosition >= 215 && pipePosition <= 305) {
+        loser()
+      }
+    } else {
+      if (charPosition < 25 && pipePosition >= 290 && pipePosition <= 380) {
+        loser()
+      }
+ 
+      
+    }
   }
 
+  window.addEventListener('resize', verificarColisao);
+  verificarColisao();
 
+ 
 }, 10);
+
+//----------------------- modo dark ---------------------//
+
+
+let hora = new Date().getHours();
+console.log(hora);
+
+if (hora >= 18 || hora >= 1 && hora <= 4 ) {
+  let game_board = document.querySelector(".game-board");
+  let main = document.querySelector("main");
+
+  document.body.style.backgroundColor = "#2c2c2c";
+  main.style.backgroundColor = "#2c2c2c";
+  game_board.style.backgroundImage =
+    "linear-gradient(to top, #40ff63, white 20%, #2c2c2c)";
+}
 
 
 //------------------sistema iniciar--------------------//
