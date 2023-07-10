@@ -85,7 +85,6 @@ const loop = setInterval(() => {
 
 
 let hora = new Date().getHours();
-console.log(hora);
 
 if (hora >= 18 || hora >= 0 && hora <= 4 ) {
   let game_board = document.querySelector(".game-board");
